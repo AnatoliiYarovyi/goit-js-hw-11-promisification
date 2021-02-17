@@ -3,7 +3,9 @@
 // должно быть то кол - во миллисекунд которое передали во время вызова функции delay.
 
 const delay = ms => {
-  // Твой код
+  return new Promise(() => {
+    setTimeout(() => {logger(ms)}, ms)
+  })
 };
 
 const logger = time => console.log(`Resolved after ${time}ms`);
